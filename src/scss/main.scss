@@ -1,0 +1,52 @@
+@import "_normalize";
+@import "_variables";
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $yellow;
+  background: white;
+}
+
+.list{
+
+  display:block;
+  list-style-type:none;
+  margin:0;
+  padding: 0;
+}
+
+.list__item{
+
+  background: rgb(90, 90, 160);
+  padding: 0;
+  margin:8px;
+}
+
+.list__link{
+
+  color:#000;
+  text-decoration:none;
+  transition: color .3s ease-in-out;
+}
+
+.list__link:hover{
+
+  color: navy;
+}
+
+@supports (display: grid){
+
+  .list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
